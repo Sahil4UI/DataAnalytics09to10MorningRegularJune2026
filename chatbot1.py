@@ -1,7 +1,10 @@
 from datetime import datetime
 import webbrowser
+#koi bi website open krni hai chrome me.
 import os
+# os stands for operating system - music play
 import glob
+# mix files me se ek specific file access krni hai
 #iski help se kisi folder ki specific files ko filter krlete h
 
 helloIntent = ["hi","hey","wassup","hello","hy"]
@@ -24,6 +27,7 @@ while chat==True:
         # String Format Time
         print(dt.strftime("%H/%M/%S %p"))
     elif "open" in msg:
+        # open google
         webbrowser.open(msg.split()[1]+".com")
     elif "music" in msg or "song" in msg:
         # chdir - change directory - us folder m jyenge jaha files hongi
@@ -38,7 +42,8 @@ while chat==True:
             x=x+1
             print()
         no =  int(input("Enter Song No to Play : "))
-        os.startfile(songs[no-1])
+        
+        (songs[no-1])
         print("*****Music Played***")
     else:
         print("Sorry I Didn't Understand")
